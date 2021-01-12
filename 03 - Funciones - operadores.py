@@ -25,20 +25,25 @@ Operadores map, filter y reduce:
 
 -reduce: sobre una lista, va  a procesar un por uno sus valores y los transforma en un unico valor:
     -para usar reduce hay que hacer import: from functools import reduce
-    >> reduce todo a un valor >> hay que poner
-    reduce(operacion
+    >> reduce todo a un valor 
+    reduce(operacion/acumulado, parametro sobre el que se aplica)
     -ej. un sumaTodos con reduce:
         reduce(lambda de dos parametros que van a sumarse, lista sobre la que se aplica la operacion)
         >reduce(lambda x, y: x+y, lista)
         -- x sería el valor de acumulado(que me va a devolver el reduce) - empieza x= 1, y = 3> suma ambos, y ahora x es 4 e y -1, suma y el 3 es x, y es el 9 etc
     -ej: sumar numeros del 1 al 100 >> misma funcion lambda de suma, ponemos range(101) para que coja todos los numeros entre 0 y 100 -si no ponemos una entrada en range, empieza desde 0
-    
-        
+        >> reduce da problemas, solo va bien con funciones sencillas >> en el ejmplo, el problema es que en la primera iteración, x coje el primer valor y no le aplica el y*2
+    --como RESOLVER este problema.
+        -creamos una copia de la lista > l = lista[:]
+        -añado un neutro para la suma ne la posición cera > l.insert(0,0)
+        -así sumatorioDobles funcionaria correctamente
+
+>> lista[:] - 
 '''
 
 from functools import reduce
 
-lista = (1,3,-1,15,9)
+lista = [1,3,-1,15,9]
 
 listadobles = map (lambda x: x*2, lista) # esto sería sobre lista, se realiza el doble de cada uno
 print (list(listadobles))
@@ -52,5 +57,12 @@ print (sumatorio)
 suma100 = reduce(lambda x,y: x+y, range(101))
 print(suma100)
 
+
+
 sumatorioDobles = reduce (lambda x, y: x+y*2, lista)
 print (sumatorioDobles) # problema de esta es que como hace los dobles a partir de y, y no dobla la x
+#Solución
+l = lista[:]
+l.insert(0,0)
+sumatorioDobles = reduce (lambda x, y: x+y*2, l)
+print (sumatorioDobles)
