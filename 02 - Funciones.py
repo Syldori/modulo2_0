@@ -35,7 +35,7 @@ Ejemplo de funcion de primera clase:
     addAll(4)
 '''
 '''
-ejemplo de funcion de nivel superior:
+ejemplo de funcion de nivel superior: En Ejmplo funcion nivel superior
 '''
 
 
