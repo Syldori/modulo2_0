@@ -31,6 +31,7 @@ GITHUB - sistema de control de versiones distribuido
 - tras crear un git >> comandos:
     -git status para ver el estado de la captura
     -git add . (con punto, para que añada todo lo nuevo all stating area)
+    -git add nombrePrograma.py : añade un archivo concreto
     -git commit: para guardarlos (meter mensaje y demás)
     -git commit -m "Mensaje" : esto sirve para guardar poniendo ya el mensaje directamente
     -git local: para que se vean los git que hay y los cambios
