@@ -9,7 +9,7 @@ Objetos.
         - otratortugita sería una instancia de la clase Turtle
         - tortugita seria otra instancia de la clase Turtle
     >>La Clase es el bloque de código que define las caracteristicas de un objeto de un tipo determinado. Esta compuesto por funciones y variables.
-        -las funciones que van con paréntesis se llaman Métodos (de una clase) - por ejemplo, left(); fd()
+        -las funciones que van con paréntesis y fijan su comportamiento se llaman Métodos (de una clase) - por ejemplo, left(); fd()
         -las variables que van a definir su estado se llaman Atributos (.color(), speed(), position(x,y))
         
         > por eso siempre se crean con un par de paréntesis y a veces con ciertos parametros
