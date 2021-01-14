@@ -58,5 +58,9 @@ class Termometro():
          # si le digo qu me mida y no le informo nada, me va a devolver la medida que tiene
          # si le digo que mida y le informo de algo, pero ese algo es igual a la medida que tiene, me va a devolver la temperatura en la medida que informamos
             return self.__str__()
-        else: # si no coincide, habrá que hacer la conversión 
-            return self.__conversor(self.__temperatura, self.__unidadM)
+        else: # si no coincide, habrá que hacer la conversión
+            if uniM == 'F' or uniM == 'C': # primero validamos que si no estamos informando exactamente esta o en vacio, la que esté informando sea correcta
+                # Esta validación se hace por si ponemos kelvin o algo así, y que nos devuelva el valor en el que está
+                return self.__conversor(self.__temperatura, self.__unidadM)
+            else:
+                return self.__str__()
