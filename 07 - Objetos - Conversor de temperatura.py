@@ -21,6 +21,11 @@ Crear un progrma que convierta temperatura Fh a Celsius y viceversa:
 
 >>>El problema de esta version es que realmente este objeto no se comporta como uno (bastaría con hacer la funcion conversor y list)
     > para que se comporte más como uno, ver Conversor de temperatura02
+
+!!! - el proceso de crear un objeto es:
+         >Que quiero que haga
+         >Que variables necesito para que me definan su estado
+         >La funcionalidad que quiero
 '''
 
 class Termometro():
