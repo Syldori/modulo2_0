@@ -21,7 +21,14 @@ Para hacer que se comporte más como un termómetro:
             >> si le ponemos t.mide() sin nada, nos devuevle "32º F'
             >> si le ponemos t.mide('C') -es decir, una unidad que pueda transformar- >> nos devuelve la transformación a grados
 
---- 
+---Cuando hacer atributos/funciones son privados  no:
+     Se decide en función del uso que le vas a dar al objeto
+      >> se deja publico solo aquello que sea imprescindible que otros objetos que se relacionen con el pueda saber
+      >> se trata de que haya determinadas caractersiticas que si no es necesario que se vean fuera, no se hagan publicas
+      >> ej , creando un objeto de tipo cliente, con nombre, dni, apellidos
+          -lo razonble es que nombre, apellidos y dni  sean atributos privados
+          -al crear al cliente puedas definirlos y luego, por ejmplo, con el dni puedas tener un getter y no un setter
+              (es decir, que nadie pueda cambiar la información aunque se invoque)
 '''
 
 class Termometro():
@@ -45,7 +52,7 @@ class Termometro():
         else:
             self.__temperatura = temperatura
 
-    def __conversor(self, temperatura, unidad): # la ponemos privada porque nos queremos que se vea
+    def __conversor(self, temperatura, unidad): # la ponemos privada para que una función pública la llame
         if unidad.upper() == 'C':
             return '{}º F'.format(temperatura * 9/5 + 32)
         elif unidad == 'F':
